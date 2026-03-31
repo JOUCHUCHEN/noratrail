@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#F8F9FA",
+              "primary": "#8B5E3C",
+              "on-background": "#8B5E3C",
+              "surface": "#ffffff",
+              "outline-variant": "#EAE5D9",
+              "secondary": "#4A6741",
+              "tertiary": "#E69A6A"
+            },
+            fontFamily: {
+              "headline": ["'Noto Sans TC'", "sans-serif"],
+              "body": ["'Noto Sans TC'", "sans-serif"],
+              "sans-hans": ["'Source Han Sans TC'", "'Noto Sans TC'", "sans-serif"],
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+        }
+        body {
+            min-height: 100dvh;
+            font-family: 'Source Han Sans TC', 'Noto Sans TC', sans-serif;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-background text-on-background font-sans-hans pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full px-6 py-4 flex justify-between items-center bg-[#F8F9FA]/80 backdrop-blur-md z-50 border-b border-stone-100">
+<div class="flex items-center gap-3">
+<img alt="Nora Trail Logo" class="h-6 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0ujxjshdtqZw2K-gPc1YpXIXQxvkSa3hObxKI1UNOMX_MR2epROc_CKaumjy86hZ7rSxyrt-uWUsk1TDU8lvUEIegdg2DboA1aubuP73GWwI-ns1b-ruToILQFxVnVuRWOfDVyMGtkpHogJySV6Z1hjGDNam6hkIFB6LmVk-_nxvw-OCmG8LoWMv8Nf3Bcn-be-0AthDtVZQ1_NaHUwOZmdgMha1C5m9Y9GFb8AOhpHmH_qMUAKwCXdLUNf3UBxtgKOrUkk4b9e_AOU"/>
+<h1 class="font-bold text-[18px] tracking-tight text-[#8B5E3C]">Nora trail</h1>
+</div>
+<div class="flex items-center gap-4">
+</div>
+</header>
+<main class="px-6 max-w-md mx-auto space-y-8 fade-in pt-24">
+<!-- Title -->
+<h2 class="text-3xl font-black tracking-widest mb-2 text-[#8B5E3C]">關於野路子</h2>
+<!-- Illustration Image -->
+<div class="w-full rounded-[32px] overflow-hidden shadow-sm border border-stone-100">
+<img alt="About Image" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uj2SERrvwgXcXPk9iisL5nztHhQacGUqDCU9_zuuJJtUf8ZYpFsFdB60ojdMtyXa-jc3JlQ7FrzrX5l5g1hROW9EE5iQyY92ZGwWrJXSc66EEst0vXnUxO_DJuoTJ_kuqGjlEhT6ZCq7n_JptT8N17qKmfkYmnPrMWp7taJ8NaeUpIReXZhMCWT-AP-PDnH5VLQPE93HJyvlQ-LKsoKfy_jgU6jVcyR1MoUJ140k6eyhcS21jWqjXd26hicqM8Q4mpWdPVfLO8v4Q8"/>
+</div>
+<!-- 項目背景 Section -->
+<section class="bg-white rounded-[32px] p-8 shadow-sm border border-stone-100 relative overflow-hidden">
+<h3 class="font-black text-xl text-primary mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-[#10b981]">landscape</span>
+<span>項目背景</span>
+</h3>
+<div class="space-y-4 text-[#78716c] text-[13px] leading-relaxed font-light">
+<p>徒步，可以發生在任何地方。<br/>在鄉間，在山野，在城市，在路上。<br/>它不需要門票，只要踏出步伐，便已發生。<br/>我們在沿途望見美好景致，<br/>在每一步間，與自我對話。</p>
+<p>只是，我們想做的，不止於走走。<br/>行走間，我們看見自然的美好，<br/>也看見被忽略的生命——流浪動物。</p>
+<p>於是我們開始思考：<br/>在「走路」這件最日常、最溫和的事中，<br/>我們能為自己，為其他生命，多做點什麼？</p>
+<p>野路子 Nora Trail 因而誕生。</p>
+<p>這是一個以徒步公益為核心的計畫：<br/>我們相信——<br/>先治癒自己，再療癒生靈；<br/>在療癒生靈的過程，重新治癒自己。<br/>良善的循環，會讓自己與世界越來越好。</p>
+</div>
+</section>
+<!-- 關於名字 Section -->
+<section class="bg-white rounded-[32px] p-8 shadow-sm border border-stone-100 relative overflow-hidden">
+<h3 class="font-black text-xl text-primary mb-6 flex items-center gap-2">
+<i class="text-tertiary" data-lucide="cat" style="width: 24px; height: 24px;"></i>
+<span>關於名字</span>
+</h3>
+<div class="space-y-6 text-[#78716c] text-[13px] leading-relaxed">
+<div>
+<h4 class="text-primary font-bold text-sm mb-4">野路子 Nora Trail</h4>
+<div class="space-y-6 font-light">
+<div>
+<p class="font-bold text-secondary mb-1">中文｜野路子</p>
+<p>破除常規之路——<br/>即便走在尋常路，也能走出不尋常。</p>
+</div>
+<div>
+<p>我們藉著走路，<br/>讓心靈「野」起來，對話無數可能。</p>
+</div>
+<div>
+<p class="font-bold text-secondary mb-1">英文｜Nora Trail</p>
+<p>取自日文「野良（のら）」——<br/>一種無主、自由流動的狀態。<br/>我們在無拘無束的徒步流動中，回歸自我。</p>
+</div>
+<div>
+<p>我們為野良貓犬而走，<br/>為城市邊緣的生命走出一條路。</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 公益計畫 Section -->
+<section class="bg-white rounded-[32px] p-8 shadow-sm border border-stone-100 relative overflow-hidden">
+<h3 class="font-black text-xl text-primary mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-[#ef4444]">favorite</span>
+<span>公益計畫</span>
+</h3>
+<div class="space-y-6 text-[#78716c] text-[13px] leading-relaxed">
+<div>
+<h4 class="text-secondary font-bold mb-2">公益原則</h4>
+<ul class="list-none space-y-1">
+<li>- 營收 10% 投入「野路子浪浪醫療救助基金」</li>
+<li>- 不設募捐帳戶、不代收捐款</li>
+<li>- 所有公益收支透明化</li>
+</ul>
+</div>
+<div>
+<h4 class="text-secondary font-bold mb-2">公益對象</h4>
+<ul class="list-none space-y-1">
+<li>- 合規的流浪動物救助／動物福利團體</li>
+<li>- 支持流浪動物救治的動物醫院</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Slogan Section -->
+<section class="flex flex-col items-center justify-center opacity-40 mt-12 py-8">
+<span class="font-black text-primary tracking-[0.2em] text-lg mb-2 uppercase">Nora trail</span>
+<span class="text-[10px] font-black text-primary">走野路，見良野。</span>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 px-6 pb-8 pt-3 flex justify-around items-center bg-white border-t border-stone-100 shadow-2xl">
+<!-- 野路子 -->
+<a class="flex flex-col items-center justify-center text-stone-300 p-2 transition-all" href="#">
+<span class="material-symbols-outlined" style="font-size: 24px;">map</span>
+<span class="text-[10px] font-black mt-1">野路子</span>
+</a>
+<!-- 良野 -->
+<a class="flex flex-col items-center justify-center text-stone-300 p-2 transition-all" href="#">
+<i data-lucide="paw-print" style="width: 24px; height: 24px;"></i>
+<span class="text-[10px] font-black mt-1">良野</span>
+</a>
+<!-- 商店 -->
+<a class="flex flex-col items-center justify-center text-stone-300 p-2 transition-all" href="#">
+<i data-lucide="shopping-bag" style="width: 24px; height: 24px;"></i>
+<span class="text-[10px] font-black mt-1">商店</span>
+</a>
+<!-- 關於 - ACTIVE -->
+<a class="flex flex-col items-center justify-center text-[#8B5E3C] scale-110 p-2 transition-all" href="#">
+<i data-lucide="cat" style="width: 1.515rem; height: 1.515rem;"></i>
+<span class="text-[10px] font-black mt-1">關於</span>
+</a>
+</nav>
+<script>
+    lucide.createIcons();
+</script>
+</body></html>

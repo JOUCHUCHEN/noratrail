@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-TW"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "brand-brown": "#8B5E3C",
+              "brand-green": "#4A6741",
+              "brand-orange": "#E69A6A",
+              "brand-white": "#F8F9FA",
+              "brand-accent": "#EAE5D9",
+              "primary": "#8B5E3C",
+              "background": "#F8F9FA",
+              "surface": "#ffffff",
+              "on-surface": "#8B5E3C",
+              "outline-variant": "#EAE5D9"
+            },
+            fontFamily: {
+              "headline": ["Noto Sans TC", "sans-serif"],
+              "body": ["Noto Sans TC", "sans-serif"],
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        body {
+            min-height: 100dvh;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-brand-orange/30">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-white border-b border-stone-100">
+<div class="flex items-center gap-4 truncate">
+<button class="w-10 h-10 flex items-center justify-center rounded-full text-brand-brown">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<h1 class="font-bold text-base tracking-tight text-brand-brown truncate -ml-[18px]">【古路循跡：豆腐皮古道環線】</h1>
+</div>
+</nav>
+<main class="pt-20 px-6 max-w-md mx-auto space-y-10 pb-10">
+<!-- Hero Map Section with Overlaid Description -->
+<section class="relative">
+<div class="relative w-full aspect-[16/10] rounded-[40px] overflow-hidden shadow-lg group">
+<img alt="豆腐皮古道地圖" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uj-da7o5o4Gg2ugPZYr1FbIVUG56kKx7ONVRv2LO967jNpWWJJEuJTuiKrYOmYPJGfAkPfJWKqxrzMALkSt6HOQ1UMxKfeVus1FJSLvLB3p6rTao1RyXs31rcJ1MezLnE7hi0PEKoBijCXz7RCfYTGuccc9YEwitdBIDyUs3Sxc4cfyGDJ4STtylmaqXwpBjOS4t9cs4A3wHJckXaGUsFGC6PDR-jiBUz4Jqn7cK8IMGYvIFxruUhc68kHE8kTKGgElD-vNN4RX1A"/>
+<div class="absolute inset-0 bg-stone-900/60 p-8 text-white flex flex-col justify-center backdrop-blur-[2px]">
+<p class="text-[12px] leading-6 font-medium text-justify">
+                        豆腐皮古道，位在杭州東塢山，也稱“東塢山大洋塢古道”。古道修建於隋唐，至今有1300多年歷史。東塢山村民歷代生產豆腐皮，經由古道將產品挑往杭州各大寺院與餐館。昔時路線由東塢山出發，途經轉塘、梅家塢、十里琅璫，最終抵達靈隱寺、天竺寺一帶。現今規劃的古道環線串聯自然水庫與山巔景觀，沿途林木蔥鬱，石階蜿蜒，既有自然景致，亦有歷史的遺跡。至今我們還能此吃上好吃的豆腐皮料理！
+                    </p>
+</div>
+</div>
+</section>
+<!-- Primary Action Button -->
+<button class="w-full py-5 bg-blue-50 text-blue-900 border border-blue-100 rounded-[28px] flex items-center justify-between px-6 active:scale-95 transition-all shadow-sm">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-blue-700" data-icon="navigation">navigation</span>
+<div class="text-left">
+<h4 class="font-bold text-sm">跟著軌跡走</h4>
+<p class="text-[10px] opacity-60">獲取兩步路離線軌跡</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-blue-400 text-sm" data-icon="open_in_new">open_in_new</span>
+</button>
+<!-- Timeline Section -->
+<section class="space-y-8">
+<h2 class="font-bold text-2xl text-brand-brown tracking-wide">我們出發吧！</h2>
+<div class="relative ml-4 pl-8 border-l-2 border-stone-200 space-y-8">
+<!-- Point 1 -->
+<div class="relative">
+<div class="absolute -left-[43px] top-1 w-7 h-7 bg-white border-2 border-brand-orange rounded-full flex items-center justify-center text-brand-orange z-10 shadow-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">pets</span>
+</div>
+<div class="text-left">
+<h4 class="font-bold text-brand-brown text-lg leading-tight">大洋塢水庫</h4>
+<p class="text-stone-400 text-xs mt-1 italic leading-relaxed">「今天的徒步，就從杭州的小九寨溝出發吧。」</p>
+</div>
+</div>
+<!-- Point 2 -->
+<div class="relative">
+<div class="absolute -left-[43px] top-1 w-7 h-7 bg-white border-2 border-brand-orange rounded-full flex items-center justify-center text-brand-orange z-10 shadow-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">pets</span>
+</div>
+<div class="text-left">
+<h4 class="font-bold text-brand-brown text-lg leading-tight">豆腐皮古道</h4>
+<p class="text-stone-400 text-xs mt-1 italic leading-relaxed">「踏入千年古道，走進人跡與自然交織的林蔭。」</p>
+</div>
+</div>
+<!-- Point 3 -->
+<div class="relative">
+<div class="absolute -left-[43px] top-1 w-7 h-7 bg-white border-2 border-brand-orange rounded-full flex items-center justify-center text-brand-orange z-10 shadow-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">pets</span>
+</div>
+<div class="text-left">
+<h4 class="font-bold text-brand-brown text-lg leading-tight">東庵橋</h4>
+<p class="text-stone-400 text-xs mt-1 italic leading-relaxed">「橫跨溪谷，聽水聲潺潺訴說往事。」</p>
+</div>
+</div>
+<!-- Point 4 -->
+<div class="relative">
+<div class="absolute -left-[43px] top-1 w-7 h-7 bg-white border-2 border-brand-orange rounded-full flex items-center justify-center text-brand-orange z-10 shadow-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">pets</span>
+</div>
+<div class="text-left">
+<h4 class="font-bold text-brand-brown text-lg leading-tight">大德嶺</h4>
+<p class="text-stone-400 text-xs mt-1 italic leading-relaxed">「登高望遠，感受山巔吹來的自在微風。」</p>
+</div>
+</div>
+<!-- Point 5 -->
+<div class="relative">
+<div class="absolute -left-[43px] top-1 w-7 h-7 bg-white border-2 border-brand-orange rounded-full flex items-center justify-center text-brand-orange z-10 shadow-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">pets</span>
+</div>
+<div class="text-left">
+<h4 class="font-bold text-brand-brown text-lg leading-tight">飛鳳岩觀景台</h4>
+<p class="text-stone-400 text-xs mt-1 italic leading-relaxed">「俯瞰翠綠山谷與城市的邊際。」</p>
+</div>
+</div>
+<!-- Point 6 -->
+<div class="relative">
+<div class="absolute -left-[43px] top-1 w-7 h-7 bg-white border-2 border-brand-orange rounded-full flex items-center justify-center text-brand-orange z-10 shadow-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">pets</span>
+</div>
+<div class="text-left">
+<h4 class="font-bold text-brand-brown text-lg leading-tight">挹翠亭</h4>
+<p class="text-stone-400 text-xs mt-1 italic leading-relaxed">「完成一半旅程囉！在這稍作休憩吧。」</p>
+</div>
+</div>
+<!-- Point 7 -->
+<div class="relative">
+<div class="absolute -left-[43px] top-1 w-7 h-7 bg-white border-2 border-brand-orange rounded-full flex items-center justify-center text-brand-orange z-10 shadow-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">pets</span>
+</div>
+<div class="text-left">
+<h4 class="font-bold text-brand-brown text-lg leading-tight">何家村未來市集</h4>
+<p class="text-stone-400 text-xs mt-1 italic leading-relaxed">「在山腳村落，體驗創意新活力。」</p>
+</div>
+</div>
+<!-- Point 8 -->
+<div class="relative">
+<div class="absolute -left-[43px] top-1 w-7 h-7 bg-white border-2 border-brand-orange rounded-full flex items-center justify-center text-brand-orange z-10 shadow-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">pets</span>
+</div>
+<div class="text-left">
+<h4 class="font-bold text-brand-brown text-lg leading-tight">光明寺水庫</h4>
+<p class="text-stone-400 text-xs mt-1 italic leading-relaxed">「翠綠山野中，看見一片碧綠沁涼。」</p>
+</div>
+</div>
+<!-- Point 9 -->
+<div class="relative">
+<div class="absolute -left-[43px] top-1 w-7 h-7 bg-white border-2 border-brand-orange rounded-full flex items-center justify-center text-brand-orange z-10 shadow-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">pets</span>
+</div>
+<div class="text-left">
+<h4 class="font-bold text-brand-brown text-lg leading-tight">西山森林公園</h4>
+<p class="text-stone-400 text-xs mt-1 italic leading-relaxed">「森林呼吸，沉浸在負氧離子綠徑。」</p>
+</div>
+</div>
+<!-- Point 10 -->
+<div class="relative">
+<div class="absolute -left-[43px] top-1 w-7 h-7 bg-white border-2 border-brand-orange rounded-full flex items-center justify-center text-brand-orange z-10 shadow-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">pets</span>
+</div>
+<div class="text-left">
+<h4 class="font-bold text-brand-brown text-lg leading-tight">大洋塢水庫</h4>
+<p class="text-stone-400 text-xs mt-1 italic leading-relaxed">「回到起點，圓滿結束這段與古道對話的旅程。」</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Risk Warning Box -->
+<section class="bg-orange-50 border border-orange-100 rounded-[28px] p-6 flex items-start gap-4">
+<span class="material-symbols-outlined text-brand-orange shrink-0 mt-0.5" data-icon="warning">warning</span>
+<p class="text-[11px] text-orange-800/70 font-bold leading-relaxed text-justify">
+                徒步活動存在一定風險，出發前請評估自身體力與天氣狀況，備妥必要裝備並攜帶充足補給。建議結伴而行，隨時注意路線標誌。
+            </p>
+</section>
+<!-- Recommendation Section -->
+<section class="space-y-6">
+<h2 class="font-bold text-xl text-brand-brown flex items-center gap-2">
+<span class="material-symbols-outlined text-brand-orange" data-icon="book">book</span>
+                入手護照，留下專屬印記
+            </h2>
+<div class="grid grid-cols-2 gap-4">
+<!-- Passport Card -->
+<div class="bg-white rounded-[24px] overflow-hidden shadow-sm border border-stone-100 active:scale-95 transition-all">
+<img alt="Nora Trail徒步護照" class="aspect-square w-full object-cover bg-stone-50" src="https://lh3.googleusercontent.com/aida/ADBb0uhOqpyDJ3QMhyeROna5R32hT3QgfUwxeU4qL9tOlK5J3rTNlTnKbHUuoJlzQoqqJJbLiGRvA7Y-GOmeFt2Wkt2B-yRqdt9Ylq5sO0017x4ZDwqZm8PUZjJ0Nq-vErEyoQw2z5Iu4cEf79dL5xlIQ6Se0IDEjURq9QcsXDNENobQYo8GQJ3_Vb-fvlhvJpOmkujCbGeS5z3CCJFeOOlPOgu67ETVrQQIRMQhKLS8XDvAb-j3WxHdsX5VBCwg-p0YQD3ujw6DbmdmaUU"/>
+<div class="p-4 text-left">
+<h4 class="font-black text-[12px] text-brand-brown truncate">Nora Trail徒步護照</h4>
+<div class="font-black text-brand-orange mt-2">¥58</div>
+</div>
+</div>
+<!-- Leaf Card -->
+<div class="bg-white rounded-[24px] overflow-hidden shadow-sm border border-stone-100 active:scale-95 transition-all">
+<img alt="護照路線活頁卡" class="aspect-square w-full object-cover bg-stone-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0EibGEaBiJTrnXgKXdXntc2-Gb3xeg2yv2_G13zzJsqOiIznT5fktg0KZtlQRaYKo8iMLiikl2Q2miLN2Zwtk-qkQIDDb8VqVsh8Sqp9RxKqvQoVuuQpvJmyKF3S2OKVsQqmMBaOohWdd19r_HzId91zKBMgmGBqFRFaw_XNIKFrczbTxg2LJnfbQNV1xV7gqppBD7ZH5V2tB8BnUgfsyfnstAokK7_X3ZjEMJ0SYiOnnjqx1nC20fo2hW5KqcGrqQUpn3czLeh6_"/>
+<div class="p-4 text-left">
+<h4 class="font-black text-[12px] text-brand-brown truncate">護照路線活頁卡</h4>
+<div class="font-black text-brand-orange mt-2">¥15.9</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</body></html>

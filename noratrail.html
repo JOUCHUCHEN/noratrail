@@ -1,0 +1,111 @@
+<!DOCTYPE html><html class="light" lang="zh-TW"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Nora Trail - 野路子</title>
+<!-- Fonts: Source Han Sans (Noto Sans TC as the Google Fonts equivalent) -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8B5E3C",
+                        "background-light": "#f7f7f6",
+                        "background-dark": "#1d1815",
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Sans TC", "sans-serif"],
+                        "body": ["Noto Sans TC", "sans-serif"],
+                        "label": ["Noto Sans TC", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif !important;
+            min-height: max(884px, 100dvh);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .grain-overlay {
+            position: relative;
+        }
+        .grain-overlay::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0.03;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+    </style>
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#f7f7f6] font-body text-on-surface min-h-screen" data-mode="connect">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full px-6 py-4 flex justify-between items-center bg-[#F8F9FA]/80 backdrop-blur-md z-50 border-b border-stone-100">
+<div class="flex items-center flex items-center"><img alt="Nora Trail Logo" class="h-6 w-auto object-contain mr-2" src="https://lh3.googleusercontent.com/aida/ADBb0ujxjshdtqZw2K-gPc1YpXIXQxvkSa3hObxKI1UNOMX_MR2epROc_CKaumjy86hZ7rSxyrt-uWUsk1TDU8lvUEIegdg2DboA1aubuP73GWwI-ns1b-ruToILQFxVnVuRWOfDVyMGtkpHogJySV6Z1hjGDNam6hkIFB6LmVk-_nxvw-OCmG8LoWMv8Nf3Bcn-be-0AthDtVZQ1_NaHUwOZmdgMha1C5m9Y9GFb8AOhpHmH_qMUAKwCXdLUNf3UBxtgKOrUkk4b9e_AOU" style="">
+<h1 class="font-headline tracking-tight font-bold text-[#8B5E3C] text-[18px]" style="">Nora trail</h1></div>
+<div class="flex items-center gap-4">
+<!-- Notification icon removed to maintain a cleaner look or match specific screen needs, but structure kept consistent with SCREEN_179 header if needed -->
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-screen-xl mx-auto">
+<!-- Main Content -->
+<div class="grid grid-cols-1 gap-12">
+<div class="lg:col-span-12">
+<!-- Trail Card: Integrated Title -->
+<article class="group relative bg-white overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-on-surface/5 rounded-2xl shadow-sm">
+<!-- Image Container: Kept 16:9 aspect ratio -->
+<div class="relative aspect-video overflow-hidden grain-overlay">
+<img alt="豆腐皮古道環線地圖" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Topographic map route showing the Tofu Skin Ancient Road loop over terraced rice fields" src="https://raw.githubusercontent.com/JOUCHUCHEN/noratrail/main/trial001.png" style="">
+<!-- Overlay Badges -->
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-2.5 py-1 bg-white/90 backdrop-blur-md font-bold text-[10px] rounded-full shadow-sm text-[#8B5E3C] font-headline" style="">約 9.2km</span>
+<span class="px-2.5 py-1 backdrop-blur-md text-white font-bold text-[10px] rounded-full shadow-sm bg-primary/90 font-headline" style="">難度 中等</span>
+</div>
+</div>
+<!-- Integrated Content -->
+<div class="p-6">
+<div class="flex items-center justify-between gap-4">
+<h3 class="font-headline font-bold text-lg md:text-xl text-[#8B5E3C] leading-tight -ml-[3px] flex items-center gap-2" style="font-weight: 700;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="dog" aria-hidden="true" class="lucide lucide-dog w-5 h-5 shrink-0 translate-y-[1px]" style="color: #8B5E3C;"><path d="M11.25 16.25h1.5L12 17z"></path><path d="M16 14v.5"></path><path d="M4.42 11.247A13.152 13.152 0 0 0 4 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444a11.702 11.702 0 0 0-.493-3.309"></path><path d="M8 14v.5"></path><path d="M8.5 8.5c-.384 1.05-1.083 2.028-2.344 2.5-1.931.722-3.576-.297-3.656-1-.113-.994 1.177-6.53 4-7 1.923-.321 3.651.845 3.651 2.235A7.497 7.497 0 0 1 14 5.277c0-1.39 1.844-2.598 3.767-2.277 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.855-1.45-2.239-2.5"></path></svg>古路循跡：豆腐皮古道環線</h3>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right text-stone-300 group-hover:text-primary transition-colors duration-300 w-6 h-6 shrink-0"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+</div>
+</div>
+</article>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-stone-100 flex justify-around items-center px-4 pt-3 pb-8 shadow-[0_-4px_12px_rgba(0,0,0,0.03)]">
+<!-- Nav Item: 野路子 (Active) -->
+<a class="flex flex-col items-center text-[#8B5E3C] transition-all" href="#" style="">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map" aria-hidden="true" class="lucide lucide-map w-6 h-6"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"></path><path d="M15 5.764v15"></path><path d="M9 3.236v15"></path></svg>
+<span class="text-[10px] font-black mt-1 tracking-wider" style="">野路子</span>
+</a>
+<!-- Nav Item: 良野 -->
+<a class="flex flex-col items-center text-stone-300 transition-all" href="#" style="">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="paw-print" aria-hidden="true" class="lucide lucide-paw-print w-6 h-6"><circle cx="11" cy="4" r="2"></circle><circle cx="18" cy="8" r="2"></circle><circle cx="20" cy="16" r="2"></circle><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"></path></svg>
+<span class="text-[10px] font-black mt-1 tracking-wider" style="">良野</span>
+</a>
+<!-- Nav Item: 商店 -->
+<a class="flex flex-col items-center text-stone-300 transition-all" href="#" style="">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shopping-bag" aria-hidden="true" class="lucide lucide-shopping-bag w-6 h-6"><path d="M16 10a4 4 0 0 1-8 0"></path><path d="M3.103 6.034h17.794"></path><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"></path></svg>
+<span class="text-[10px] font-black mt-1 tracking-wider" style="">商店</span>
+</a>
+<!-- Nav Item: 關於 -->
+<a class="flex flex-col items-center text-stone-300 transition-all" href="#" style="">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="cat" aria-hidden="true" style="width: 1.515rem; height: 1.515rem;" class="lucide lucide-cat"><path d="M12 5c.67 0 1.35.09 2 .26 1.78-2 5.03-2.84 6.42-2.26 1.4.58-.42 7-.42 7 .57 1.07 1 2.24 1 3.44C21 17.9 16.97 21 12 21s-9-3-9-7.56c0-1.25.5-2.4 1-3.44 0 0-1.89-6.42-.5-7 1.39-.58 4.72.23 6.5 2.23A9.04 9.04 0 0 1 12 5Z"></path><path d="M8 14v.5"></path><path d="M16 14v.5"></path><path d="M11.25 16.25h1.5L12 17l-.75-.75Z"></path></svg>
+<span class="text-[10px] font-black mt-1 tracking-wider" style="">關於</span>
+</a>
+</nav>
+<script>lucide.createIcons();</script>
+</body></html>

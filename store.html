@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "brand-brown": "#8B5E3C",
+            "brand-green": "#4A6741",
+            "brand-orange": "#E69A6A",
+            "brand-white": "#F8F9FA",
+            "brand-accent": "#EAE5D9",
+            "primary": "#8B5E3C",
+            "surface": "#F8F9FA",
+            "on-surface": "#8B5E3C",
+            "on-surface-variant": "#a09084"
+          },
+          fontFamily: {
+            "headline": ["Manrope", "sans-serif"],
+            "body": ["Manrope", "sans-serif"],
+            "label": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+    body {
+      min-height: 100dvh;
+      background-color: #F8F9FA;
+    }
+    .font-black { font-weight: 800; }
+  </style>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700;900&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="text-brand-brown font-body antialiased pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full px-6 py-4 flex justify-between items-center bg-[#F8F9FA]/80 backdrop-blur-md z-50 border-b border-stone-100">
+<div class="flex items-center gap-3">
+<img alt="Nora Trail Logo" class="h-6 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0ujxjshdtqZw2K-gPc1YpXIXQxvkSa3hObxKI1UNOMX_MR2epROc_CKaumjy86hZ7rSxyrt-uWUsk1TDU8lvUEIegdg2DboA1aubuP73GWwI-ns1b-ruToILQFxVnVuRWOfDVyMGtkpHogJySV6Z1hjGDNam6hkIFB6LmVk-_nxvw-OCmG8LoWMv8Nf3Bcn-be-0AthDtVZQ1_NaHUwOZmdgMha1C5m9Y9GFb8AOhpHmH_qMUAKwCXdLUNf3UBxtgKOrUkk4b9e_AOU"/>
+<h1 style="font-family: 'Noto Sans TC', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em;">Nora trail</h1>
+</div>
+<div class="flex items-center gap-3">
+<!-- Notification bell removed per request -->
+</div>
+</header>
+<main class="pt-24 px-6 max-w-md mx-auto">
+<!-- Hero Title Section -->
+<section class="mb-10">
+<h2 class="font-black mb-2 tracking-widest text-3xl" style="font-family: 'Noto Sans TC', sans-serif;">野路子商店</h2>
+</section>
+<!-- Category: 護照與活頁卡 -->
+<section class="mb-12">
+<h3 class="font-black mb-4 flex items-center space-x-2 px-2">
+<span class="material-symbols-outlined text-orange-500" style="font-size: 18px;">book_5</span>
+<span>護照與活頁卡</span>
+</h3>
+<div class="grid grid-cols-2 gap-4">
+<!-- Product: Nora Trail徒步護照 (p1) -->
+<div class="bg-white rounded-[28px] overflow-hidden shadow-sm border border-stone-100 cursor-pointer active:scale-95 transition-all">
+<img alt="Nora Trail徒步護照" class="aspect-square w-full object-cover bg-stone-50" src="https://lh3.googleusercontent.com/aida/ADBb0uhOqpyDJ3QMhyeROna5R32hT3QgfUwxeU4qL9tOlK5J3rTNlTnKbHUuoJlzQoqqJJbLiGRvA7Y-GOmeFt2Wkt2B-yRqdt9Ylq5sO0017x4ZDwqZm8PUZjJ0Nq-vErEyoQw2z5Iu4cEf79dL5xlIQ6Se0IDEjURq9QcsXDNENobQYo8GQJ3_Vb-fvlhvJpOmkujCbGeS5z3CCJFeOOlPOgu67ETVrQQIRMQhKLS8XDvAb-j3WxHdsX5VBCwg-p0YQD3ujw6DbmdmaUU"/>
+<div class="p-4">
+<h4 class="font-black text-[13px] truncate">Nora Trail徒步護照</h4>
+<div class="font-black text-orange-600 mt-2">¥58</div>
+</div>
+</div>
+<!-- Product: 護照路線活頁卡 -->
+<div class="bg-white rounded-[28px] overflow-hidden shadow-sm border border-stone-100 cursor-pointer active:scale-95 transition-all">
+<img alt="護照路線活頁卡" class="aspect-square w-full object-cover bg-stone-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCc44wdcse-xLuySvSHRmKVyNM1mmiCqCcH8aj-tETDOwiSWW6Cb66qpVjXu_TcZ--BvecIVwivJ0wvUBN_UL55R1qqV0ooxDGmJJP8au9bZpppTTlPasqFV3Y2hONriwW202Vtr4Vxi8IKHt5nTK9lgw95gwMPfApUxMRmeFQ_C45Zgn1vFKxiZxS3xcxVfZ5FDdd2HTvt19A5pPmJwrzU1yX7-xGKKAr112hYolDUPpe-xBQALDvj4o3KdIgWWoQaVEhQDcv5T5X"/>
+<div class="p-4">
+<h4 class="font-black text-[13px] truncate">護照路線活頁卡</h4>
+<div class="font-black text-orange-600 mt-2">¥15.9</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Category: 與寵同行 -->
+<section class="mb-16">
+<h3 class="font-black mb-4 flex items-center space-x-2 px-2">
+<span class="material-symbols-outlined text-emerald-600" style="font-size: 18px;">pets</span>
+<span>與寵同行</span>
+</h3>
+<div class="space-y-4">
+<!-- Product: 寵物外出摺疊飲水/食用碗 (g2) -->
+<div class="bg-white rounded-[32px] p-3 shadow-sm border border-stone-100 flex items-center space-x-4 cursor-pointer active:scale-[0.98] transition-all">
+<img alt="寵物外出摺疊碗" class="w-24 h-24 rounded-2xl object-cover bg-stone-50 shadow-inner" src="https://lh3.googleusercontent.com/aida/ADBb0uis5qwWY3ZR7NGj7TIN19YOWcr-19FAcUCSClI0_CBsHDOc4HIQiljADRfgybobPZ7U9dD68K5oDLYLbQQ0kmBoMrOzDRTm2uEa-wd9a-rM4wdDAtxPf_1liFEtI_gy2RWNmHrvbHOw8mnpEH2DqzSzcxggNdq_PMmnBTJqqGW9auQLdpV5fmIzpCguvCfr1W3bMFpQmGvlol_eRz7mC7LgMzsdQpL_nYnqGOVs3voNPWcj0Tb5UTalXJtwgBytJowoG5hoeyU0ZRE"/>
+<div class="flex-1 overflow-hidden">
+<h4 class="font-black text-sm mb-1">寵物外出摺疊飲水/食用碗</h4>
+<p class="text-[10px] font-bold text-stone-400 truncate mb-2">食品級矽膠、輕量掛勾設計</p>
+<div class="flex justify-between items-center">
+<span class="font-black text-emerald-700">¥9.9</span>
+<span class="text-[9px] text-[#ff5000] font-black underline uppercase tracking-tighter">Buy Now</span>
+</div>
+</div>
+</div>
+<!-- Product: 狗狗自動伸縮牽引繩 (g3) -->
+<div class="bg-white rounded-[32px] p-3 shadow-sm border border-stone-100 flex items-center space-x-4 cursor-pointer active:scale-[0.98] transition-all">
+<img alt="自動伸縮牽引繩" class="w-24 h-24 rounded-2xl object-cover bg-stone-50 shadow-inner" src="https://lh3.googleusercontent.com/aida/ADBb0ui81N6FpfRnHEIuGNLfz8Ab0LWPoigkCXYTxlGd4hVCmgt1mdw4FHDSoyBJl3x_WWTRU21FRwzIH6p6WFw_g-1Ml-1Iy-9eoMZ8DIMgqhffL0lCkYMAX4eFa5zC8OKDw1zmh90NFJTmZnK3qWTExMdobYf8iqBchd5jdxp9TwYfjAsg4ShOwScDZjt3VSCI7UKBiLB3fQHk8-NOa1O0qUpyd8eqKlKa0rKPpLwAZrpbeNGFP0C6gdFlBZTawml7TWGp64KirY_6cQ"/>
+<div class="flex-1 overflow-hidden">
+<h4 class="font-black text-sm mb-1">狗狗自動伸縮牽引繩(夜間照明)</h4>
+<p class="text-[10px] font-bold text-stone-400 truncate mb-2">夜間照明、一鍵鎖定</p>
+<div class="flex justify-between items-center">
+<span class="font-black text-emerald-700">¥29.9</span>
+<span class="text-[9px] text-[#ff5000] font-black underline uppercase tracking-tighter">Buy Now</span>
+</div>
+</div>
+</div>
+<!-- Product: 寵物毛收納吊飾 -->
+<div class="bg-white rounded-[32px] p-3 shadow-sm border border-stone-100 flex items-center space-x-4 cursor-pointer active:scale-[0.98] transition-all">
+<img alt="寵物毛收納吊飾" class="w-24 h-24 rounded-2xl object-cover bg-stone-50 shadow-inner" src="https://lh3.googleusercontent.com/aida/ADBb0ugjxsAJED62Pp0VsrtfCJtxrwEJLB4ATh0amtamVy02cv8J30-f8E36HxoYxzhI21g4N6RoB_67YnXzsqYLZEiXbgss1VMZaLDpJM4ITUzmUHpELr3keqGie0VqQe8CAlILkagVc-Fe5vZqbzFZKV7PRlzNv5Dwfb-J4v9MwwYHTuWFloagZKNZrbtYFc2Kol52pdHhpLrb8Bonc05XkmDt9uB7V267pIV_8rkT4kQMQ8avQyNH6mV9uf3ja3Tn6PBlHvoAl8D564k"/>
+<div class="flex-1 overflow-hidden">
+<h4 class="font-black text-sm mb-1">與寵同行—寵物毛收納吊飾</h4>
+<p class="text-[10px] font-bold text-stone-400 truncate mb-2">亞克力透明，珍藏毛髮</p>
+<div class="flex justify-between items-center">
+<span class="font-black text-emerald-700">¥9.9</span>
+<span class="text-[9px] text-[#ff5000] font-black underline uppercase tracking-tighter">Buy Now</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Standalone Charity Illustration -->
+<section class="mt-8 mb-12">
+<img alt="Charity Illustration" class="w-full rounded-[32px] shadow-sm" src="https://lh3.googleusercontent.com/aida/ADBb0ug7IHvY9ovs4xAViT8X3O9jD7jM55VYQ_ilaXc3bW80Isg-T1B29BrhMz_13PX0hl8Pg3l_2D_PxdWYVuilXjwcXGTUi508G9L9JCYvUKK4lXZIpa1CBrGxlZSO7YdBHMwohtquRWTW9L-nk-_07hLlqpgunRSHiN7uaRIcn4Vx6Bnx8YVuWm5faB1AyYAkYZ9dcdLzPPq3q0K_N83bMW_MF_vQ7RG76-7lY2ZyFURM5sHrnaifXVbWi5Tp5nrcDRQen_zv7XGXnC4"/>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-stone-100 flex justify-around items-center pt-3 pb-6 shadow-[0_-4px_12px_rgba(0,0,0,0.03)]">
+<!-- Nav Item: 野路子 (Inactive) -->
+<a class="flex flex-col items-center gap-0 text-stone-300 transition-all" href="#">
+<svg class="lucide lucide-map" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"></path><path d="M9 4v13"></path><path d="M15 7v13"></path></svg>
+<span class="text-[10px] font-black mt-1">野路子</span>
+</a>
+<!-- Nav Item: 良野 (Inactive) -->
+<a class="flex flex-col items-center gap-0 text-stone-300 transition-all" href="#">
+<i class="w-6 h-6" data-lucide="paw-print"></i>
+<span class="text-[10px] font-black mt-1">良野</span>
+</a>
+<!-- Nav Item: 商店 (Active) -->
+<a class="flex flex-col items-center gap-0 text-[#8B5E3C] scale-110 transition-all" href="#">
+<svg class="lucide lucide-shopping-bag" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+<span class="text-[10px] font-black mt-1">商店</span>
+</a>
+<!-- Nav Item: 關於 (Inactive) -->
+<a class="flex flex-col items-center gap-0 text-stone-300 transition-all" href="#">
+<i data-lucide="cat" style="width: 1.515rem; height: 1.515rem;"></i>
+<span class="text-[10px] font-black mt-1">關於</span>
+</a>
+</nav>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>lucide.createIcons();</script>
+</body></html>
