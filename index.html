@@ -2,7 +2,7 @@
 <html class="light" lang="zh-Hant">
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
   <title>Nora Trail - 歡迎</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -31,6 +31,8 @@
     body {
       min-height: 100dvh;
       margin: 0;
+      /* 💡 強制隱藏 X 軸，避免貓咪走到右邊緣時撐破網頁寬度 */
+      overflow-x: hidden; 
     }
     
     .grain-overlay {
@@ -45,7 +47,6 @@
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
     }
 
-    /* 🐈 貓咪走路的上下彈跳與微傾斜動畫 */
     @keyframes walk {
       0%, 100% { transform: translateY(0) rotate(0deg); }
       25% { transform: translateY(-3px) rotate(-4deg); }
@@ -58,7 +59,7 @@
   </style>
 </head>
 
-<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-white overflow-hidden">
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-white overflow-hidden w-full max-w-[100vw]">
   
   <main class="relative h-[100dvh] w-full flex flex-col items-center px-8 justify-center overflow-hidden" style="background-color: #e5e1d5;">
     
@@ -73,7 +74,6 @@
       <p class="text-primary font-bold text-sm mb-6 tracking-widest animate-pulse">即將啟程...</p>
 
       <div class="relative w-full h-1.5 bg-primary/10 rounded-full">
-        
         <div id="progress-fill" class="absolute top-0 left-0 h-full bg-primary rounded-full transition-all duration-75" style="width: 0%;"></div>
 
         <div id="walking-cat" class="absolute bottom-1 -translate-x-1/2 transition-all duration-75" style="left: 0%;">
@@ -81,7 +81,6 @@
             <path d="M320 192h17.1c22.1 38.3 63.5 64 110.9 64c11 0 21.8-1.4 32-4v4 32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V339.2L280 348V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V288H56c-22.1 0-40-17.9-40-40V128c0-17.7 14.3-32 32-32h80c8.8 0 16 7.2 16 16v80h16V32c0-17.7 14.3-32 32-32h80c17.7 0 32 14.3 32 32v160h16z"/>
           </svg>
         </div>
-
       </div>
     </div>
 
@@ -93,25 +92,25 @@
       const cat = document.getElementById("walking-cat");
       
       let progress = 0;
-      const duration = 2500; // 動畫總時長：2.5 秒 (2500 毫秒)
-      const intervalTime = 20; // 每 20 毫秒更新一次
+      const duration = 2500; 
+      const intervalTime = 20; 
       const step = (100 / (duration / intervalTime)); 
 
       const timer = setInterval(() => {
         progress += step;
         
-        // 進度達到 100% 時的處理
         if (progress >= 100) {
           progress = 100;
           clearInterval(timer);
           
-          // 停頓 0.3 秒後再跳轉，讓視覺有到達終點的緩衝感
           setTimeout(() => {
-            window.location.href = 'noratrail.html';
+            // 💡 測試期間先註解掉跳轉，改成 alert 提示。
+            // 測試確認沒問題後，再把註解拿掉恢復跳轉功能。
+            alert('動畫結束！準備跳轉至菜單頁。');
+            // window.location.href = 'noratrail.html'; 
           }, 300);
         }
         
-        // 更新進度條寬度與貓咪位置
         fill.style.width = `${progress}%`;
         cat.style.left = `${progress}%`;
         
