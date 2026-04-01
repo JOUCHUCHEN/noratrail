@@ -1,24 +1,20 @@
-<!DOCTYPE html>
-<html class="light" lang="zh-Hant">
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-  <title>Nora Trail - 歡迎</title>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!DOCTYPE html> <html class="light" lang="zh-Hant"> <head>
+  <meta charset="utf-8"> <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  <title>Nora Trail - 歡迎</title> <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
+    tailwind.config = { // 自定義 Tailwind 的配置
+      darkMode: "class", // 使用 class 方式切換深色模式
       theme: {
         extend: {
-          colors: {
+          colors: { // 定義專案專用的品牌顏色
             "background": "#fef9ed",
             "primary": "#6f4627",
             "on-background": "#1d1c14",
             "primary-container": "#8b5e3c"
           },
-          fontFamily: {
+          fontFamily: { // 設定標題與內文使用的字體族群
             "headline": ["Epilogue"],
             "body": ["Manrope"],
           }
@@ -29,23 +25,26 @@
   
   <style>
     body {
-      min-height: 100dvh;
-      margin: 0;
-      overflow-x: hidden; 
+      min-height: 100dvh; /* 設定最小高度為 100% 動態視窗高度 */
+      margin: 0; /* 移除預設邊距 */
+      overflow-x: hidden; /* 防止左右出現滾動條 */
     }
     
+    /* 建立噪點（顆粒感）遮罩層，增加視覺質感 */
     .grain-overlay {
       position: absolute; 
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      pointer-events: none;
-      z-index: 1; 
-      opacity: 0.05;
+      pointer-events: none; /* 讓點擊事件穿透此層，不影響操作 */
+      z-index: 1; /* 位於背景之上 */
+      opacity: 0.05; /* 透明度極低，隱約可見 */
+      /* 使用 SVG 產生隨機噪點紋理 */
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
     }
 
+    /* 定義「走路」動畫：上下位移並輕微旋轉 */
     @keyframes walk {
       0%, 100% { transform: translateY(0) rotate(0deg); }
       25% { transform: translateY(-3px) rotate(-4deg); }
@@ -53,7 +52,7 @@
       75% { transform: translateY(-3px) rotate(4deg); }
     }
     .animate-walk {
-      animation: walk 0.4s infinite linear;
+      animation: walk 0.4s infinite linear; /* 無限循環走路動畫 */
     }
   </style>
 </head>
@@ -70,8 +69,6 @@
 
     <div class="absolute bottom-[10%] md:bottom-[15%] left-1/2 -translate-x-1/2 w-full max-w-[200px] z-10 flex flex-col items-center">
       
-      <p class="text-primary font-bold text-sm mb-6 tracking-widest animate-pulse">即將啟程...</p>
-
       <div class="relative w-full h-1.5 bg-primary/10 rounded-full">
         <div id="progress-fill" class="absolute top-0 left-0 h-full bg-primary rounded-full transition-all duration-75" style="width: 0%;"></div>
 
@@ -86,28 +83,30 @@
   </main>
 
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const fill = document.getElementById("progress-fill");
-      const cat = document.getElementById("walking-cat");
+    document.addEventListener("DOMContentLoaded", () => { // 確保網頁 DOM 元素加載完成後執行
+      const fill = document.getElementById("progress-fill"); // 獲取進度條元素
+      const cat = document.getElementById("walking-cat"); // 獲取貓咪元素
       
-      let progress = 0;
-      const duration = 2500; 
-      const intervalTime = 20; 
-      const step = (100 / (duration / intervalTime)); 
+      let progress = 0; // 初始化進度數值為 0
+      const duration = 2500; // 設定總動畫時間（2.5 秒）
+      const intervalTime = 20; // 設定每次跳動的時間間隔（20 毫秒）
+      const step = (100 / (duration / intervalTime)); // 計算每次間隔應增加的進度比例
 
+      // 設定定時器，模擬進度增長
       const timer = setInterval(() => {
-        progress += step;
+        progress += step; // 增加進度
         
-        if (progress >= 100) {
+        if (progress >= 100) { // 如果進度達到 100%
           progress = 100;
-          clearInterval(timer);
+          clearInterval(timer); // 停止定時器
           
           setTimeout(() => {
-            // 直接跳轉到正式頁面
+            // 自動跳轉到目標頁面
             window.location.href = 'noratrail.html'; 
-          }, 300);
+          }, 300); // 跑滿後稍微停留 0.3 秒再跳轉
         }
         
+        // 即時更新 CSS 樣式，讓進度條與貓咪動起來
         fill.style.width = `${progress}%`;
         cat.style.left = `${progress}%`;
         
