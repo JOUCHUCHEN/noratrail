@@ -31,7 +31,6 @@
     body {
       min-height: 100dvh;
       margin: 0;
-      /* 💡 強制隱藏 X 軸，避免貓咪走到右邊緣時撐破網頁寬度 */
       overflow-x: hidden; 
     }
     
@@ -104,10 +103,8 @@
           clearInterval(timer);
           
           setTimeout(() => {
-            // 💡 測試期間先註解掉跳轉，改成 alert 提示。
-            // 測試確認沒問題後，再把註解拿掉恢復跳轉功能。
-            alert('動畫結束！準備跳轉至菜單頁。');
-            // window.location.href = 'noratrail.html'; 
+            // 直接跳轉到正式頁面
+            window.location.href = 'noratrail.html'; 
           }, 300);
         }
         
