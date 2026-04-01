@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Nora Trail - 歡迎</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
   
   <script id="tailwind-config">
     tailwind.config = {
@@ -21,7 +21,6 @@
           fontFamily: {
             "headline": ["Epilogue"],
             "body": ["Manrope"],
-            "label": ["Manrope"]
           }
         }
       }
@@ -36,31 +35,34 @@
     }
     
     .grain-overlay {
-      position: fixed;
+      position: absolute; /* 改為 absolute，相對於 main 定位 */
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       pointer-events: none;
-      z-index: 99;
-      /* 💡 將透明度調整為 0.15，讓紙張紋理更明顯 */
-      opacity: 0.15;
+      z-index: 1; /* 層級設定為 1，在背景之上，但內容之下 */
+      
+      /* 💡 調整：將透明度大幅降低至 0.05，呈現若有似無的質感，避免髒感 */
+      opacity: 0.05;
+      
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
     }
   </style>
 </head>
 
 <body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-white overflow-hidden">
-  <div class="grain-overlay"></div>
   
-  <main class="relative h-[100dvh] w-full flex flex-col items-center px-8 justify-center" style="background-color: #e5e1d5;">
+  <main class="relative h-[100dvh] w-full flex flex-col items-center px-8 justify-center overflow-hidden" style="background-color: #e5e1d5;">
     
-    <div class="flex flex-col items-center justify-center space-y-8 mb-12 w-full z-10">
-      <img alt="Nora Trail Logo" class="w-full h-auto drop-shadow-sm max-w-[252px]" src="https://i.ibb.co/kVzHsb9S/logo-20260328.png">
+    <div class="grain-overlay"></div>
+    
+    <div class="relative z-10 flex flex-col items-center justify-center space-y-8 mb-12 w-full">
+      <img alt="Nora Trail Logo" class="w-full h-auto drop-shadow-sm max-w-[252px]" src="https://i.ibb.co/tpyRbX4P/logo-20260328-S.png">
     </div>
 
     <div class="absolute bottom-[10%] md:bottom-[15%] left-1/2 -translate-x-1/2 w-full max-w-[240px] z-10">
-      <button onclick="window.location.href='noratrail.html'" aria-label="開啟旅程" class="w-full h-16 cursor-pointer bg-primary text-white rounded-full font-medium transition-transform active:scale-95 shadow-lg flex items-center justify-center">
+      <button onclick="window.location.href='noratrail.html'" aria-label="開啟旅程" class="w-full h-16 cursor-pointer bg-primary text-white rounded-full font-medium transition-transform active:scale-95 shadow-lg flex items-center justify-center hover:bg-[#5a3920]">
         我們出發吧！
       </button>
     </div>
