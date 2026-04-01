@@ -28,25 +28,32 @@
   </script>
   
   <style>
-    /* 改用 100dvh (動態視口高度)，確保在手機瀏覽器上不會被導覽列遮擋 */
     body {
       min-height: 100dvh;
       margin: 0;
     }
     
     .grain-overlay {
-      position: absolute; /* 改為 absolute，相對於 main 定位 */
+      position: absolute; 
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       pointer-events: none;
-      z-index: 1; /* 層級設定為 1，在背景之上，但內容之下 */
-      
-      /* 💡 調整：將透明度大幅降低至 0.05，呈現若有似無的質感，避免髒感 */
+      z-index: 1; 
       opacity: 0.05;
-      
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    /* 🐈 貓咪走路的上下彈跳與微傾斜動畫 */
+    @keyframes walk {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      25% { transform: translateY(-3px) rotate(-4deg); }
+      50% { transform: translateY(0) rotate(0deg); }
+      75% { transform: translateY(-3px) rotate(4deg); }
+    }
+    .animate-walk {
+      animation: walk 0.4s infinite linear;
     }
   </style>
 </head>
@@ -61,12 +68,55 @@
       <img alt="Nora Trail Logo" class="w-full h-auto drop-shadow-sm max-w-[252px]" src="https://i.ibb.co/tpyRbX4P/logo-20260328-S.png">
     </div>
 
-    <div class="absolute bottom-[10%] md:bottom-[15%] left-1/2 -translate-x-1/2 w-full max-w-[240px] z-10">
-      <button onclick="window.location.href='noratrail.html'" aria-label="開啟旅程" class="w-full h-16 cursor-pointer bg-primary text-white rounded-full font-medium transition-transform active:scale-95 shadow-lg flex items-center justify-center hover:bg-[#5a3920]">
-        我們出發吧！
-      </button>
+    <div class="absolute bottom-[10%] md:bottom-[15%] left-1/2 -translate-x-1/2 w-full max-w-[200px] z-10 flex flex-col items-center">
+      
+      <p class="text-primary font-bold text-sm mb-6 tracking-widest animate-pulse">即將啟程...</p>
+
+      <div class="relative w-full h-1.5 bg-primary/10 rounded-full">
+        
+        <div id="progress-fill" class="absolute top-0 left-0 h-full bg-primary rounded-full transition-all duration-75" style="width: 0%;"></div>
+
+        <div id="walking-cat" class="absolute bottom-1 -translate-x-1/2 transition-all duration-75" style="left: 0%;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-7 h-7 animate-walk" fill="#6f4627">
+            <path d="M320 192h17.1c22.1 38.3 63.5 64 110.9 64c11 0 21.8-1.4 32-4v4 32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V339.2L280 348V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V288H56c-22.1 0-40-17.9-40-40V128c0-17.7 14.3-32 32-32h80c8.8 0 16 7.2 16 16v80h16V32c0-17.7 14.3-32 32-32h80c17.7 0 32 14.3 32 32v160h16z"/>
+          </svg>
+        </div>
+
+      </div>
     </div>
 
   </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const fill = document.getElementById("progress-fill");
+      const cat = document.getElementById("walking-cat");
+      
+      let progress = 0;
+      const duration = 2500; // 動畫總時長：2.5 秒 (2500 毫秒)
+      const intervalTime = 20; // 每 20 毫秒更新一次
+      const step = (100 / (duration / intervalTime)); 
+
+      const timer = setInterval(() => {
+        progress += step;
+        
+        // 進度達到 100% 時的處理
+        if (progress >= 100) {
+          progress = 100;
+          clearInterval(timer);
+          
+          // 停頓 0.3 秒後再跳轉，讓視覺有到達終點的緩衝感
+          setTimeout(() => {
+            window.location.href = 'noratrail.html';
+          }, 300);
+        }
+        
+        // 更新進度條寬度與貓咪位置
+        fill.style.width = `${progress}%`;
+        cat.style.left = `${progress}%`;
+        
+      }, intervalTime);
+    });
+  </script>
 </body>
 </html>
